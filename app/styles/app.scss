@@ -1,7 +1,21 @@
+@import 'reset';
 @import 'ember-paper';
+
+$darkgray: #313542;
 
 html {
 	font-size: 8px;
+	height: 100%;
+}
+
+body {
+	height: 100%;
+}
+
+body > .ember-view {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
 }
 
 .header__link {
@@ -10,4 +24,22 @@ html {
 
 .header__profile {
 	margin: 0 1rem;
+}
+
+.landing {
+	background-color: $darkgray;
+	color: gold;
+	flex: 1 0 auto;
+}
+
+.landing__start {
+	bottom: 3rem;
+	position: absolute;
+}
+
+.landing__text {
+	font-size: 4rem;
+	margin: 2rem 0;
+	max-width: 60%;
+	text-align: center;
 }
