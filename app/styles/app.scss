@@ -59,3 +59,15 @@ body > .ember-view {
 		height: 100%;
 	}
 }
+
+.daily-life {
+	background-color: green;
+}
+
+.daily-life__code {
+	height: 100%;
+
+	.ace_editor {
+		height: 100%;
+	}
+}

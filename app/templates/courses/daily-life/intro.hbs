@@ -1,0 +1,21 @@
+<h1>Creating a coinbase account</h1>
+
+<div class='flex daily-life-intro layout-row'>
+	<div class='flex-70 layout-column daily-life__code'>
+		{{ember-ace value=customCode update=(action (mut customCode)) class='flex code__editor'}}
+
+		<button {{action 'executeCustomCode'}}>
+			Submit
+		</button>
+	</div>
+
+	<div class='flex-30 daily-life-intro__instructions'>
+		<h1>Create a coinbase account for you to use by:</h1>
+		<ol>
+			<li>Following the link and creating an account in the new page</li>
+			<li>Logging into your coinbase account using the button provided.</li>
+		</ol>
+	</div>
+
+	{{outlet}}
+</div>

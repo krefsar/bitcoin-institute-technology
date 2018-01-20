@@ -12,6 +12,10 @@ Router.map(function() {
     this.route('coding', function() {
       this.route('mining');
     });
+
+    this.route('daily-life', function() {
+      this.route('intro');
+    });
   });
 });
 

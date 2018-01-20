@@ -7,7 +7,12 @@
 
 	<div class='layout-row flex'>
 		<h1 class='flex layout-column layout-align-center-center'>Finance</h1>
-		<h1 class='flex layout-column layout-align-center-center'>Daily Life</h1>
+
+		<div class='flex layout-column layout-align-center-center'>
+			{{#link-to 'courses.daily-life.intro'}}
+				<h1>Daily Life</h1>
+			{{/link-to}}
+		</div>
 	</div>
 
 	{{outlet}}
