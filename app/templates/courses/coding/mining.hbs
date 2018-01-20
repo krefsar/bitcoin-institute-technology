@@ -1,0 +1,17 @@
+<h1>Creating public keys from a private key</h1>
+
+<div class='flex mining layout-row'>
+	<div class='flex-70 layout-column mining__code'>
+		{{ember-ace value=customCode update=(action (mut customCode)) class='flex code__editor'}}
+
+		<button {{action 'executeCustomCode'}}>
+			Submit
+		</button>
+	</div>
+
+	<div class='flex-30 mining__instructions'>
+		These are the instructions for what we're looking for.
+	</div>
+
+	{{outlet}}
+</div>

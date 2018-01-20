@@ -43,3 +43,19 @@ body > .ember-view {
 	max-width: 60%;
 	text-align: center;
 }
+
+.coding {
+	background-color: blue;
+}
+
+.mining {
+	background-color: brown;
+}
+
+.mining__code {
+	height: 100%;
+
+	.ace_editor {
+		height: 100%;
+	}
+}
