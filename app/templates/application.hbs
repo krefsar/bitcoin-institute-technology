@@ -1,2 +1,23 @@
-<h1>B.I.T. - Bitcoin Institute of Technology</h1>
+{{#paper-toolbar}}
+  {{#paper-toolbar-tools}}
+		{{#link-to 'index'}}
+	    <h2 class='header__logo'>
+	      <span class='logo'>B.I.T.</span>&nbsp;Bitcoin Institute of Technology
+	    </h2>
+		{{/link-to}}
+
+    <span class="flex"></span>
+
+		{{#link-to 'about' class='header__link'}}
+			About
+		{{/link-to}}
+
+		{{#link-to 'courses' class='header__link'}}
+			Courses
+		{{/link-to}}
+
+		{{paper-icon 'account-circle' class='header__profile' size='36'}}
+  {{/paper-toolbar-tools}}
+{{/paper-toolbar}}
+
 {{outlet}}

@@ -1,0 +1,6 @@
+{
+  "name": "bitcoin-institute-technology",
+  "dependencies": {
+    "reset-scss": "^2.0.2"
+  }
+}
