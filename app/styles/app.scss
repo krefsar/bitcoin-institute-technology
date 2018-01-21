@@ -74,21 +74,6 @@ a {
 	font-weight: 700 !important;
 }
 
-.coding {
-}
-
-.mining {
-	background-color: brown;
-}
-
-.mining__code {
-	height: 100%;
-
-	.ace_editor {
-		height: 100%;
-	}
-}
-
 .daily-life {
 }
 
@@ -266,4 +251,88 @@ a {
 
 .coding__mining {
 	height: 90vh;
+}
+
+.mining__header {
+	padding: 1rem;
+	color: white;
+	background-color: black;
+}
+
+.back-link {
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	color: $bityellow;
+}
+
+.mining__title {
+	font-size: 2rem;
+	text-transform: uppercase;
+}
+
+.api__button {
+	background: transparent;
+	border: 2px solid white;
+	border-radius: 3px;
+	color: white;
+	font-size: 2rem;
+	padding: 0 2rem;
+}
+
+.mining {
+	padding-top: 1rem;
+	background-color: $darkgray;
+}
+
+.mining__code {
+	height: 100%;
+	box-shadow: 10px 0px 10px black;
+
+	.ace_editor {
+		height: 100%;
+	}
+}
+
+.instructions {
+	background-color: $bitblue;
+	margin: 4rem 0 0 2rem;
+	border-radius: 1rem 0 0 0;
+	padding: 2rem;
+	color: white;
+	font-size: 2rem;
+}
+
+.instructions__goal {
+	font-weight: 700;
+	font-size: 2.25rem;
+	margin-bottom: 1rem;
+	line-height: 1.25;
+}
+
+.instructions__prompt {
+	margin-bottom: 1rem;
+}
+
+.instructions__steps {
+	list-style-type: decimal;
+	padding: 2rem;
+	color: $bityellow;
+}
+
+.instruction__step + .instruction__step {
+	margin-top: 2rem;
+}
+
+.button__container {
+	margin-top: 3rem;
+}
+
+.code__submit-button {
+	padding: 2rem;
+	background: $bitgreen;
+	border: none;
+	color: white;
+	font-size: 3rem;
+	width: 60%;
+	box-shadow: 0px 1rem 1rem black;
 }

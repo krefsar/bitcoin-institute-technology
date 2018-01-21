@@ -1,20 +1,43 @@
 <div class='coding__mining layout-column'>
-	<h1>Creating public keys from a private key</h1>
+	<header class='mining__header layout-row layout-align-space-between-center'>
+		{{#link-to 'courses.coding' class='back-link'}}
+			{{fa-icon 'chevron-left'}}
+			Back
+		{{/link-to}}
+
+		<h1 class='mining__title'>Creating public keys from a private key</h1>
+
+		<button class='api__button'>
+			API
+		</button>
+	</header>
 
 	<div class='flex mining layout-row'>
 		<div class='flex-70 layout-column mining__code'>
-			{{ember-ace value=customCode update=(action (mut customCode)) class='flex code__editor'}}
-
-			<button {{action 'executeCustomCode'}}>
-				Submit
-			</button>
+			{{ember-ace
+				value=customCode
+				update=(action (mut customCode))
+				class='flex code__editor'}}
 		</div>
 
-		<div class='flex-30 mining__instructions'>
-			<h1>Given a privateKey, generate a public key by:</h1>
-			<ol>
-				<li>Hashing privateKey twice with bcrypt.SHA256()</li>
+		<div class='flex-30 instructions'>
+			<h1 class='instructions__goal'>In order to get our private key ready for conversion to the WIF format, we need to modify and hash it multiple times.</h1>
+
+			<h2 class='instructions__prompt'>In this exercise, you'll have access to a String variable privateKey, which you'll have to modify according to the instructions below.</h2>
+
+			<ol class='instructions__steps'>
+				<li class='instruction__step'>Prefix the Key - When hashing, every key needs a prefix specific to its type. Private keys need to have a prefix of '0x80'.</li>
+				<li class='instruction__step'>Hash It Twice - Use the SHA256 hashing algorithm on your private key twice: first on the prefixed key, then on the result of the first hashing. Use the SHA256 function of the built-in crypto library. (Remember you can always view built-in libraries by clicking the API button above)</li>
+				<li class='instruction__step'>Return the result.</li>
 			</ol>
+
+			<h2 class='instructions__prompt'>Click Run when you're ready to check your work.</h2>
+
+			<div class='layout-row layout-align-center-center button__container'>
+				<button {{action 'executeCustomCode'}} class='code__submit-button'>
+					Run
+				</button>
+			</div>
 		</div>
 
 		{{outlet}}
