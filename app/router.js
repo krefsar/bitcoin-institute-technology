@@ -15,7 +15,12 @@ Router.map(function() {
 
     this.route('daily-life', function() {
       this.route('intro');
+      this.route('getting-paid');
     });
+  });
+
+  this.route('redirect', function() {
+    this.route('coinbase');
   });
 });
 

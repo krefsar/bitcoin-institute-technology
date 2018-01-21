@@ -1,0 +1,30 @@
+<h1>This is where you can learn how to get paid</h1>
+
+<div class='layout-column flex'>
+	<div class='flex layout-row'>
+		<div class='flex-30'>
+			These are the instructions
+		</div>
+
+		<div class='flex-70'>
+			<button {{action 'generatePublicKey'}}>
+				Generate a Public Key!
+			</button>
+
+			{{#each publicKeys as |publicKey|}}
+				{{public-key publicKey=publicKey}}
+			{{/each}}
+		</div>
+	</div>
+
+	<footer class='daily-life__footer layout-row layout-align-space-between-center'>
+		<h1>Getting paid</h1>
+
+		<div class='layout-row'>
+			{{paper-icon 'home'}}
+			{{paper-icon 'arrow-forward'}}
+			{{paper-icon 'home'}}
+		</div>
+		<h1>Reward</h1>
+	</footer>
+</div>

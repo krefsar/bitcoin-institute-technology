@@ -1,35 +1,18 @@
 import Controller from '@ember/controller';
+import { later } from '@ember/runloop';
 
 export default Controller.extend({
-	acceptableAnswers: ['abc', 'def'],
-	testCases: [
-		{
-			input: 123,
-			expected: 'ABC'
-		},
-		{
-			input: 456,
-			expected: 'DEF'
-		}
-	],
-	customCode: '',
-
-	modifyCode(customCode) {
-		return `let privateKey = arguments[0]; ${customCode}`;
-	},
+	loading: false,
+	loggedIn: false,
 
 	actions: {
-		executeCustomCode() {
-			this.get('testCases').forEach((testCase) => {
-				let modifiedCode = this.modifyCode(this.get('customCode'));
+		coinbaseLogin() {
+			this.set('loading', true);
 
-				let result = new Function(modifiedCode)(testCase.input);
-				if (result === testCase.expected) {
-					alert('you got it right!');
-				} else {
-					alert(`you returned ${result} and we expected ${testCase.expected}`);
-				}
-			});
+			later(this, function() {
+				this.set('loading', false);
+				this.set('loggedIn', true);
+			}, 2000);
 		}
 	}
 });

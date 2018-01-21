@@ -1,12 +1,24 @@
 <h1>Creating a coinbase account</h1>
 
 <div class='flex daily-life-intro layout-row'>
-	<div class='flex-70 layout-column daily-life__code'>
-		{{ember-ace value=customCode update=(action (mut customCode)) class='flex code__editor'}}
-
-		<button {{action 'executeCustomCode'}}>
-			Submit
-		</button>
+	<div class='flex-70 layout-column daily-life__panel'>
+		{{#if loading}}
+			<div class='layout-column layout-align-center-center'>
+				{{loading-spinner}}
+			</div>
+		{{else}}
+			{{#unless loggedIn}}
+				<div class='flex layout-column layout-align-center-center'>
+					<button {{action 'coinbaseLogin'}}>
+						Login to Coinbase
+					</button>
+				</div>
+			{{else}}
+				<div class='flex layout-column layout-align-center-center'>
+					This is your portfolio!
+				</div>
+			{{/unless}}
+		{{/if}}
 	</div>
 
 	<div class='flex-30 daily-life-intro__instructions'>

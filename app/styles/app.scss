@@ -64,10 +64,6 @@ body > .ember-view {
 	background-color: green;
 }
 
-.daily-life__code {
-	height: 100%;
-
-	.ace_editor {
-		height: 100%;
-	}
+.daily-life__panel {
+	background-color: $darkgray;
 }
