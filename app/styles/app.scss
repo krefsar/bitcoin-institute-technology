@@ -17,6 +17,7 @@ body {
 }
 
 a {
+	cursor: pointer;
 	color: inherit;
 	text-decoration: none;
 }
@@ -99,4 +100,63 @@ a {
 
 .courses {
 	height: 90vh;
+}
+
+.courses__link {
+	height: 30rem;
+	width: 50rem;
+
+	h1 {
+		font-size: 6rem;
+		text-align: center;
+		padding: 3rem;
+	}
+}
+
+.link__coding {
+	font-family: 'VT323', sans-serif;
+	font-weight: 700;
+	font-size: 8rem !important;
+}
+
+.link__daily-life {
+	font-family: 'Abril Fatface', serif;
+}
+
+.link__finance {
+	font-family: 'Coustard', serif;
+}
+
+.link__dialog {
+	background-color: white;
+	font-size: 2rem;
+	border-radius: 1rem;
+	border: 3px solid $bitblue;
+	padding: 3rem;
+	text-align: center;
+	height: 10rem;
+}
+
+.daily-life__image {
+	position: absolute;
+	height: 25rem;
+	width: 40rem;
+	margin-left: 5rem;
+	z-index: -1;
+}
+
+.coding__image {
+	position: absolute;
+	height: 25rem;
+	width: 40rem;
+	margin-left: 5rem;
+	z-index: -1;
+}
+
+.finance__image {
+	position: absolute;
+	height: 25rem;
+	width: 40rem;
+	margin-left: 5rem;
+	z-index: -1;
 }

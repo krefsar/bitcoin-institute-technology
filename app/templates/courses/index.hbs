@@ -1,20 +1,42 @@
 <div class='layout-column flex courses__index'>
 	<div class='flex layout-row'>
-		<div class='layout-column layout-align-center-center flex coding__image'>
-		{{#link-to 'courses.coding'}}
-			<h1>Coding</h1>
-		{{/link-to}}
+		<div class='layout-column layout-align-center-center flex'>
+			{{#link-to 'courses.coding'}}
+				<img class='coding__image' src='assets/img/gears.png'/>
+				<div class='courses__link layout-column layout-align-end-center'>
+					<h1 class='link__coding'>Coding</h1>
+					<div class='link__dialog layout-column layout-align-center-center'>
+						<p>Learn how Bitcoin technology works by coding it, step by step</p>
+					</div>
+				</div>
+			{{/link-to}}
+		</div>
+
+		<div class='layout-column layout-align-center-center flex'>
+			{{#link-to 'courses.daily-life'}}
+				<img class='daily-life__image' src='assets/img/dailyLife.png'/>
+				<div class='courses__link layout-column layout-align-end-center'>
+					<h1 class='link__daily-life'>Daily Life</h1>
+					<div class='link__dialog layout-column layout-align-center-center'>
+						<p>Learn how to use Bitcoin in your everyday life</p>
+					</div>
+				</div>
+			{{/link-to}}
+		</div>
 	</div>
 
-		<div class='layout-column layout-align-center-center flex daily-life__image'>
-		{{#link-to 'courses.daily-life'}}
-			<h1>Daily Life</h1>
-		{{/link-to}}
-	</div>
-	</div>
-
-	<div class='layout-row flex layout-align-center-center finance__image'>
-		<h1 class='flex layout-column layout-align-center-center'>Finance</h1>
+	<div class='layout-row flex layout-align-center-center'>
+		<div class='layout-column layout-align-center-center'>
+			{{#link-to 'courses.finance'}}
+				<img class='finance__image' src='assets/img/finance.png'>
+				<div class='courses__link layout-column layout-align-end-center'>
+					<h1 class='link__finance'>Finance</h1>
+					<div class='layout-column link__dialog layout-align-center-center'>
+						<p>Become a master of Bitcoin economics by learning the ins and outs of investment</p>
+					</div>
+				</div>
+			{{/link-to}}
+		</div>
 	</div>
 
 	{{outlet}}

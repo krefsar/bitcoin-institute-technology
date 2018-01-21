@@ -17,6 +17,7 @@ Router.map(function() {
       this.route('intro');
       this.route('getting-paid');
     });
+    this.route('finance');
   });
 
   this.route('redirect', function() {
