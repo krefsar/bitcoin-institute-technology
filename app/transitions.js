@@ -16,7 +16,7 @@ export default function(){
 
 	this.transition(
 		this.fromRoute('courses.index'),
-		this.toRoute(['courses.coding', 'courses.daily-life']),
+		this.toRoute(['courses.coding', 'courses.daily-life', 'courses.finance']),
 		this.use('explode', {
 			matchBy: 'data-highlight-id',
 			use: ['flyTo', {duration: 750}]

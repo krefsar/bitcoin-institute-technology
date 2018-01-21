@@ -107,6 +107,8 @@ a {
 		font-size: 6rem;
 		text-align: center;
 		padding: 3rem;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    text-shadow: 1px 1px 5px white, 0 0 25px white, 0 0 5px white;
 	}
 }
 
@@ -152,9 +154,10 @@ a {
 
 .finance__image {
 	position: absolute;
-	height: 25rem;
-	width: 40rem;
+	height: 20rem;
+	width: 38rem;
 	margin-left: 5rem;
+	margin-top: 5rem;
 	z-index: -1;
 }
 
