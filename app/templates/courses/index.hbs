@@ -1,18 +1,20 @@
 <div class='layout-column flex courses__index'>
-	<div class='flex layout-column layout-align-center-center'>
+	<div class='flex layout-row'>
+		<div class='layout-column layout-align-center-center flex coding__image'>
 		{{#link-to 'courses.coding'}}
 			<h1>Coding</h1>
 		{{/link-to}}
 	</div>
 
-	<div class='layout-row flex'>
-		<h1 class='flex layout-column layout-align-center-center'>Finance</h1>
+		<div class='layout-column layout-align-center-center flex daily-life__image'>
+		{{#link-to 'courses.daily-life'}}
+			<h1>Daily Life</h1>
+		{{/link-to}}
+	</div>
+	</div>
 
-		<div class='flex layout-column layout-align-center-center'>
-			{{#link-to 'courses.daily-life'}}
-				<h1>Daily Life</h1>
-			{{/link-to}}
-		</div>
+	<div class='layout-row flex layout-align-center-center finance__image'>
+		<h1 class='flex layout-column layout-align-center-center'>Finance</h1>
 	</div>
 
 	{{outlet}}
