@@ -29,5 +29,12 @@ export default function(){
 		}, {
 			use: 'fade'
 		})
-	)
+	);
+
+	this.transition(
+		this.fromRoute('courses.coding.index'),
+		this.toRoute('courses.coding.mining'),
+		this.use('toLeft'),
+		this.reverse('toRight')
+	);
 }
