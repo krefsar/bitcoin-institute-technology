@@ -37,4 +37,18 @@ export default function(){
 		this.use('toLeft'),
 		this.reverse('toRight')
 	);
+
+	this.transition(
+		this.hasClass('appearing-result'),
+		this.fromValue(false),
+		this.toValue(true),
+		this.use('toRight', { duration: 1000})
+	);
+
+	this.transition(
+		this.hasClass('disappearing-cog'),
+		this.fromValue(true),
+		this.toValue(false),
+		this.use('fade', { duration: 1500 })
+	);
 }

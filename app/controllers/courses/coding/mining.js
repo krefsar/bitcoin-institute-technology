@@ -1,9 +1,12 @@
 import Controller from '@ember/controller';
 import crypto from 'npm:crypto-js';
+import { later } from '@ember/runloop';
 
 export default Controller.extend({
 	apiEnabled: false,
 	customCode: '',
+	resultsArray: [],
+	finished: false,
 
 	modifyCode(customCode) {
 		return `const crypto = arguments[1]; let privateKey = arguments[0]; ${customCode}`;
@@ -29,18 +32,38 @@ export default Controller.extend({
 
 	actions: {
 		executeCustomCode() {
+			this.set('executing', true);
+
 			let testCases = this.generateTestCases(3);
+
+			let resultsArray = this.get('resultsArray');
 
 			testCases.forEach((testCase) => {
 				let modifiedCode = this.modifyCode(this.get('customCode'));
 
 				let result = new Function(modifiedCode)(testCase.input, crypto);
-				if (result == testCase.expected) {
-					alert('you got it right!');
-				} else {
-					alert(`you returned ${result} and we expected ${testCase.expected}`);
-				}
+
+				resultsArray.pushObject({
+					result,
+					success: result == testCase.expected
+				});
 			});
+
+			later(this, function() {
+				this.set('result1', resultsArray.objectAt(0));
+			}, 2000);
+
+			later(this, function() {
+				this.set('result2', resultsArray.objectAt(1));
+			}, 2250);
+
+			later(this, function() {
+				this.set('result3', resultsArray.objectAt(2));
+			}, 2500);
+
+			later(this, function() {
+				this.set('finished', true);
+			}, 4000);
 		},
 
 		toggleApi() {

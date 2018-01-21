@@ -198,8 +198,12 @@ a {
 	}
 
 	&.in-progress {
-		.icon__container {
-			background-color: $bityellow;
+		.icon__container-50 {
+			background: linear-gradient(90deg, $bitgreen 50%, darkgray 50%);
+		}
+
+		.icon__container-70 {
+			background: linear-gradient(90deg, $bitgreen 70%, darkgray 30%);
 		}
 
 		.lesson__icon {
@@ -362,4 +366,50 @@ a {
 
 .code__snippet {
 	font-family: 'Monospace'
+}
+
+.executing__cog {
+	font-size: 12rem;
+}
+
+.executing__results {
+	margin-left: 4rem;
+}
+
+.executing__result {
+	font-size: 2rem;
+	margin: 1rem 0;
+}
+
+.result__success {
+	color: $bitgreen;
+	font-size: 2rem;
+}
+
+.finish__message {
+	margin-top: 4rem;
+	font-size: 3rem;
+}
+
+.message--success {
+	color: $bitgreen;
+}
+
+.finish__button {
+	font-size: 3rem;
+	border: none;
+	padding: 2rem 4rem;
+	background-color: $bitblue;
+	color: white;
+	margin-top: 2rem;
+}
+
+.message--failure {
+	color: red;
+}
+
+.execution__modal {
+	* {
+		overflow: hidden !important;
+	}
 }

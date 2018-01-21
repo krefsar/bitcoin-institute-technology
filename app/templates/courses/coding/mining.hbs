@@ -1,11 +1,79 @@
 <div class='coding__mining layout-column'>
+	{{#if executing}}
+		{{#paper-dialog class="flex-50 execution__modal" parent=".mining" origin=dialogOrigin clickOutsideToClose=true}}
+			{{#liquid-spacer}}
+	    <form>
+	      {{#paper-toolbar}}
+	        {{#paper-toolbar-tools}}
+	          <h2>Testing Your Code...</h2>
+	          <span class="flex"></span>
+	        {{/paper-toolbar-tools}}
+	      {{/paper-toolbar}}
+
+	      {{#paper-dialog-content}}
+						<div class='layout-column layout-align-center-center'>
+	          <div class='layout-row flex'>
+							{{#liquid-unless (and (and result1 result2) result3) class='disappearing-cog'}}
+								{{fa-icon 'cog' spin=true class='executing__cog'}}
+							{{/liquid-unless}}
+							<div class='layout-column executing__results layout-align-space-around-center'>
+								{{#liquid-if result1 class='appearing-result'}}
+								<h1 class='executing__result layout-row'>
+									{{result1.result}}
+
+									{{#if result1.success}}
+										{{fa-icon 'check' class='result__success'}}
+									{{else}}
+										{{fa-icon 'times' class='result__error'}}
+									{{/if}}
+								</h1>
+								{{/liquid-if}}
+								{{#liquid-if result2 class='appearing-result'}}
+								<h1 class='executing__result layout-row'>
+									{{result2.result}}
+
+									{{#if result2.success}}
+										{{fa-icon 'check' class='result__success'}}
+									{{else}}
+										{{fa-icon 'times' class='result__error'}}
+									{{/if}}
+								</h1>
+								{{/liquid-if}}
+								{{#liquid-if result3 class='appearing-result'}}
+									<h1 class='executing__result layout-row'>
+										{{result3.result}}
+
+										{{#if result3.success}}
+											{{fa-icon 'check' class='result__success'}}
+										{{else}}
+											{{fa-icon 'times' class='result__error'}}
+										{{/if}}
+									</h1>
+								{{/liquid-if}}
+							</div>
+	          </div>
+
+						{{#if finished}}
+							{{#if (and (and result1 result2) result3)}}
+								<h2 class='finish__message'>All tests <span class='message--success'>passed</span>. You've completed this section!</h2>
+							{{else}}
+								<h2 class='finish__message'>Some tests <span class='message--failure'>failed</span>. Review your code and give it another try!</h2>
+							{{/if}}
+							<button class='finish__button'>Done</button>
+						{{/if}}
+					</div>
+	      {{/paper-dialog-content}}
+	    </form>
+			{{/liquid-spacer}}
+	  {{/paper-dialog}}
+	{{/if}}
 	<header class='mining__header layout-row layout-align-space-between-center'>
 		{{#link-to 'courses.coding' class='back-link'}}
 			{{fa-icon 'chevron-left'}}
 			Back
 		{{/link-to}}
 
-		<h1 class='mining__title'>Private Key Hashing</h1>
+		<h1 class='mining__title'>Private Key Hashing (5/10)</h1>
 
 		<button class='api__button {{if apiEnabled 'api__button--active' 'api__button--inactive'}}' {{action 'toggleApi'}}>
 			API

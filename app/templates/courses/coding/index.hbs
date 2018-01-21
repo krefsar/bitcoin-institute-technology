@@ -12,13 +12,15 @@
 	</div>
 
 	<div class='layout-row lessons layout-align-space-around-center'>
-		<div class='lesson complete'>
-			<div class='icon__container'>{{fa-icon 'lock' class='lesson__icon'}}</div>
+		{{#link-to 'courses.coding.mining'}}
+		<div class='lesson in-progress'>
+			<div class='icon__container icon__container-50'>{{fa-icon 'lock' class='lesson__icon'}}</div>
 			<div class='lesson__dialog'>
 				<h1 class='lesson__title'>Private Keys</h1>
 				<p class='lesson__description'>Build a private key generator</p>
 			</div>
 		</div>
+		{{/link-to}}
 
 		<div class='lesson complete'>
 			<div class='icon__container'>{{fa-icon 'key' class='lesson__icon'}}</div>
@@ -34,8 +36,8 @@
 				<p class='lesson__description'>Scan the blockchain and parse transactions to gather useful data</p>
 			</div>
 		</div>
-		<div class='lesson'>
-			<div class='icon__container'>{{fa-icon 'balance-scale' class='lesson__icon'}}</div>
+		<div class='lesson in-progress'>
+			<div class='icon__container icon__container-70'>{{fa-icon 'balance-scale' class='lesson__icon'}}</div>
 			<div class='lesson__dialog'>
 				<h1 class='lesson__title'>Creating Transactions</h1>
 				<p class='lesson__description'>Build transactions using transaction outputs</p>
@@ -52,15 +54,13 @@
 			</div>
 		</div>
 
-		{{#link-to 'courses.coding.mining'}}
-			<div class='lesson in-progress'>
+			<div class='lesson complete'>
 				<div class='icon__container'>{{fa-icon 'puzzle-piece' class='lesson__icon'}}</div>
 				<div class='lesson__dialog'>
 					<h1 class='lesson__title'>Mining</h1>
 					<p class='lesson__description'>Learn to build a basic cryptographic puzzle solver</p>
 				</div>
 			</div>
-		{{/link-to}}
 
 		<div class='lesson'>
 			<div class='icon__container'>{{fa-icon 'eye' class='lesson__icon'}}</div>
