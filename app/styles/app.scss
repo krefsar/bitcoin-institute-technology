@@ -2,6 +2,10 @@
 @import 'ember-paper';
 
 $darkgray: #313542;
+$bitblue: #4252b4;
+$bitorange: #ff9c00;
+$bitgreen: #7bb31a;
+$bityellow: #eedb00;
 
 html {
 	font-size: 8px;
@@ -27,21 +31,35 @@ body > .ember-view {
 }
 
 .landing {
-	background-color: $darkgray;
-	color: gold;
+	background-color: white;
 	flex: 1 0 auto;
 }
 
-.landing__start {
-	bottom: 3rem;
-	position: absolute;
+.landing__text {
+	color: black;
+	font-family: 'Roboto', sans-serif;
+	font-size: 4rem;
+	font-weight: 400;
+	margin: 2rem 0;
+	text-align: left;
 }
 
-.landing__text {
+.landing__button {
+	background-color: $bitblue;
+	border: none;
+	box-shadow: 0 1.5rem 4rem gray;
+	color: white;
 	font-size: 4rem;
-	margin: 2rem 0;
-	max-width: 60%;
-	text-align: center;
+	padding: 2rem;
+	outline: none;
+}
+
+.landing__callout {
+	padding: 4% 8%;
+}
+
+.strong {
+	font-weight: 700 !important;
 }
 
 .coding {

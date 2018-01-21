@@ -1,10 +1,24 @@
 <div class='landing layout-column layout-align-center-center'>
-	<h1 class='landing__text'>As a new currency, Bitcoin requires a whole new financial education.</h1>
+	<div class='landing__callout layout-row layout-align-space-around-center'>
+		<div class='layout-column flex-60'>
+			<h1 class='landing__text strong'>
+				Think you need a degree to get into Bitcoin?
+			</h1>
 
-	<h1 class='landing__text'>Skip the long articles and get guided, hands-on training in the world of Bitcoin.</h1>
+			<h1 class='landing__text'>Think again.</h1>
+
+			<h1 class='landing__text'>Skip the never-ending articles and get guided, hands&#8209;on training in the world of Bitcoin.</h1>
+		</div>
+
+		<div class='flex-40'>
+			Image goes here
+		</div>
+	</div>
 
 	{{#link-to 'courses' class='landing__start'}}
-		{{#paper-button raised=true primary=true}}Start Learning{{/paper-button}}
+		<button class='landing__button'>
+			Start Learning
+		</button>
 	{{/link-to}}
 </div>
 
