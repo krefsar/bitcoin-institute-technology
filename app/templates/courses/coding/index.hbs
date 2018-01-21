@@ -1,11 +1,75 @@
-<div class='flex'>
-	{{#each lessons as |lesson|}}
-		{{#link-to lesson.to}}
-			<div>
-				{{lesson.label}}
+<div class='coding__index layout-column'>
+	<div class='layout-row layout-align-center-center'>
+		<div data-highlight-id='coding'>
+			<img class='coding__image' src='/assets/img/gears.png'/>
+			<div class='courses__link layout-column layout-align-end-center'>
+				<h1 class='link__coding'>Coding</h1>
+				<div class='link__dialog layout-column layout-align-center-center'>
+					<p>Learn how Bitcoin technology works by coding it, step by step</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class='layout-row lessons layout-align-space-around-center'>
+		<div class='lesson complete'>
+			<div class='icon__container'>{{fa-icon 'lock' class='lesson__icon'}}</div>
+			<div class='lesson__dialog'>
+				<h1 class='lesson__title'>Private Keys</h1>
+				<p class='lesson__description'>Build a private key generator</p>
+			</div>
+		</div>
+
+		<div class='lesson complete'>
+			<div class='icon__container'>{{fa-icon 'lock' class='lesson__icon'}}</div>
+			<div class='lesson__dialog'>
+				<h1 class='lesson__title'>Public Keys</h1>
+				<p class='lesson__description'>Learn how public keys are built from a private key</p>
+			</div>
+		</div>
+		<div class='lesson'>
+			<div class='icon__container'>{{fa-icon 'lock' class='lesson__icon'}}</div>
+			<div class='lesson__dialog'>
+				<h1 class='lesson__title'>Parsing Transactions</h1>
+				<p class='lesson__description'>Scan the blockchain and parse transactions to gather useful data</p>
+			</div>
+		</div>
+		<div class='lesson'>
+			<div class='icon__container'>{{fa-icon 'lock' class='lesson__icon'}}</div>
+			<div class='lesson__dialog'>
+				<h1 class='lesson__title'>Creating Transactions</h1>
+				<p class='lesson__description'>Build transactions using transaction outputs</p>
+			</div>
+		</div>
+	</div>
+
+	<div class='layout-row lessons layout-align-space-around-center'>
+		<div class='lesson'>
+			<div class='icon__container'>{{fa-icon 'lock' class='lesson__icon'}}</div>
+			<div class='lesson__dialog'>
+				<h1 class='lesson__title'>Transaction Fees</h1>
+				<p class='lesson__description'>Understand transaction fees and how to take advantage of them</p>
+			</div>
+		</div>
+
+		{{#link-to 'courses.coding.mining'}}
+			<div class='lesson in-progress'>
+				<div class='icon__container'>{{fa-icon 'lock' class='lesson__icon'}}</div>
+				<div class='lesson__dialog'>
+					<h1 class='lesson__title'>Mining</h1>
+					<p class='lesson__description'>Learn to build a basic cryptographic puzzle solver</p>
+				</div>
 			</div>
 		{{/link-to}}
-	{{/each}}
+
+		<div class='lesson'>
+			<div class='icon__container'>{{fa-icon 'lock' class='lesson__icon'}}</div>
+			<div class='lesson__dialog'>
+				<h1 class='lesson__title'>Advanced Security</h1>
+				<p class='lesson__description'>Experiment with different levels of security</p>
+			</div>
+		</div>
+	</div>
 
 	{{outlet}}
 </div>

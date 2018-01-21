@@ -1,11 +1,25 @@
-<div class='layout-column flex'>
-	{{#each lessons as |lesson|}}
-		{{#link-to lesson.to}}
-			<div>
-				{{lesson.label}}
+<div class='layout-column daily-life__index'>
+	<div class='layout-row layout-align-center-center'>
+		<div data-highlight-id='daily-life'>
+			<img class='daily-life__image' src='/assets/img/dailyLife.png'/>
+			<div class='courses__link layout-column layout-align-end-center'>
+				<h1 class='link__daily-life'>Daily Life</h1>
+				<div class='link__dialog layout-column layout-align-center-center'>
+					<p>Learn how to use Bitcoin in your everyday life</p>
+				</div>
 			</div>
-		{{/link-to}}
-	{{/each}}
+		</div>
+	</div>
 
-	{{outlet}}
+	<div class='layout-column'>
+		{{#each lessons as |lesson|}}
+			{{#link-to lesson.to}}
+				<div>
+					{{lesson.label}}
+				</div>
+			{{/link-to}}
+		{{/each}}
+
+		{{outlet}}
+	</div>
 </div>

@@ -1,41 +1,47 @@
 <div class='layout-column flex courses__index'>
 	<div class='flex layout-row'>
 		<div class='layout-column layout-align-center-center flex'>
-			{{#link-to 'courses.coding' class='course__highlight'}}
-				<img class='coding__image' src='assets/img/gears.png'/>
-				<div class='courses__link layout-column layout-align-end-center'>
-					<h1 class='link__coding'>Coding</h1>
-					<div class='link__dialog layout-column layout-align-center-center'>
-						<p>Learn how Bitcoin technology works by coding it, step by step</p>
+			<div data-highlight-id='coding' class='course__highlight'>
+				{{#link-to 'courses.coding'}}
+					<img class='coding__image' src='/assets/img/gears.png'/>
+					<div class='courses__link layout-column layout-align-end-center'>
+						<h1 class='link__coding'>Coding</h1>
+						<div class='link__dialog layout-column layout-align-center-center'>
+							<p>Learn how Bitcoin technology works by coding it, step by step</p>
+						</div>
 					</div>
-				</div>
-			{{/link-to}}
+				{{/link-to}}
+			</div>
 		</div>
 
 		<div class='layout-column layout-align-center-center flex'>
-			{{#link-to 'courses.daily-life' class='course__highlight'}}
-				<img class='daily-life__image' src='assets/img/dailyLife.png'/>
-				<div class='courses__link layout-column layout-align-end-center'>
-					<h1 class='link__daily-life'>Daily Life</h1>
-					<div class='link__dialog layout-column layout-align-center-center'>
-						<p>Learn how to use Bitcoin in your everyday life</p>
+			<div data-highlight-id='daily-life' class='course__highlight'>
+				{{#link-to 'courses.daily-life'}}
+					<img class='daily-life__image' src='/assets/img/dailyLife.png'/>
+					<div class='courses__link layout-column layout-align-end-center'>
+						<h1 class='link__daily-life'>Daily Life</h1>
+						<div class='link__dialog layout-column layout-align-center-center'>
+							<p>Learn how to use Bitcoin in your everyday life</p>
+						</div>
 					</div>
-				</div>
-			{{/link-to}}
+				{{/link-to}}
+			</div>
 		</div>
 	</div>
 
 	<div class='layout-row flex layout-align-center-center'>
 		<div class='layout-column layout-align-center-center'>
-			{{#link-to 'courses.finance' class='course__highlight'}}
-				<img class='finance__image' src='assets/img/finance.png'>
-				<div class='courses__link layout-column layout-align-end-center'>
-					<h1 class='link__finance'>Finance</h1>
-					<div class='layout-column link__dialog layout-align-center-center'>
-						<p>Become a master of Bitcoin economics by learning the ins and outs of investment</p>
+			<div class='course__highlight' data-highlight-id='finance'>
+				{{#link-to 'courses.finance'}}
+					<img class='finance__image' src='/assets/img/finance.png'>
+					<div class='courses__link layout-column layout-align-end-center'>
+						<h1 class='link__finance'>Finance</h1>
+						<div class='layout-column link__dialog layout-align-center-center'>
+							<p>Become a master of Bitcoin economics by learning the ins and outs of investment</p>
+						</div>
 					</div>
-				</div>
-			{{/link-to}}
+				{{/link-to}}
+			</div>
 		</div>
 	</div>
 

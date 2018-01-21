@@ -1,20 +1,28 @@
-<h1>Creating public keys from a private key</h1>
+<div class='coding__mining layout-column'>
+	<h1>Creating public keys from a private key</h1>
 
-<div class='flex mining layout-row'>
-	<div class='flex-70 layout-column mining__code'>
-		{{ember-ace value=customCode update=(action (mut customCode)) class='flex code__editor'}}
+	<div class='flex mining layout-row'>
+		<div class='flex-70 layout-column mining__code'>
+			{{ember-ace value=customCode update=(action (mut customCode)) class='flex code__editor'}}
 
-		<button {{action 'executeCustomCode'}}>
-			Submit
-		</button>
+			<button {{action 'executeCustomCode'}}>
+				Submit
+			</button>
+		</div>
+
+		<div class='flex-30 mining__instructions'>
+			<h1>Given a privateKey, generate a public key by:</h1>
+			<ol>
+				<li>Hashing privateKey twice with bcrypt.SHA256()</li>
+			</ol>
+		</div>
+
+		{{outlet}}
 	</div>
 
-	<div class='flex-30 mining__instructions'>
-		<h1>Given a privateKey, generate a public key by:</h1>
-		<ol>
-			<li>Hashing privateKey twice with bcrypt.SHA256()</li>
-		</ol>
-	</div>
-
-	{{outlet}}
+	<footer class='lesson__footer layout-row layout-align-space-between-center'>
+		<h1>Mining</h1>
+		<div>Progress</div>
+		<h1>Reward</h1>
+	</footer>
 </div>
