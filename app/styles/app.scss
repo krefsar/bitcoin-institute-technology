@@ -426,3 +426,15 @@ a {
 		overflow: hidden !important;
 	}
 }
+
+.back__arrow {
+	color: $bitblue;
+	text-transform: uppercase;
+	font-size: 3rem;
+	position: absolute;
+	padding: 2rem;
+}
+
+.back__text {
+	margin-left: 2rem;
+}
