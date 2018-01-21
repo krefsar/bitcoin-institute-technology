@@ -1,13 +1,11 @@
-{{#paper-toolbar}}
-  {{#paper-toolbar-tools}}
-		{{#link-to 'index'}}
-	    <h2 class='header__logo'>
-	      <span class='logo'>B.I.T.</span>&nbsp;Bitcoin Institute of Technology
-	    </h2>
-		{{/link-to}}
+<header class='header layout-row layout-align-space-between-center'>
+	{{#link-to 'index'}}
+		<h2 class='header__logo'>
+      <span class='logo'>B.I.T.</span>&nbsp;Bitcoin Institute of Technology
+    </h2>
+	{{/link-to}}
 
-    <span class="flex"></span>
-
+	<div class='layout-row layout-align-end-center'>
 		{{#link-to 'about' class='header__link'}}
 			About
 		{{/link-to}}
@@ -17,7 +15,7 @@
 		{{/link-to}}
 
 		{{paper-icon 'account-circle' class='header__profile' size='36'}}
-  {{/paper-toolbar-tools}}
-{{/paper-toolbar}}
+	</div>
+</header>
 
-{{outlet}}
+{{liquid-outlet}}

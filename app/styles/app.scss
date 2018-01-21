@@ -8,18 +8,29 @@ $bitgreen: #7bb31a;
 $bityellow: #eedb00;
 
 html {
+	font-family: 'Roboto', sans-serif;
 	font-size: 8px;
-	height: 100%;
 }
 
 body {
-	height: 100%;
+	height: 100vh;
 }
 
-body > .ember-view {
-	display: flex;
-	flex-direction: column;
-	height: 100%;
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.header {
+	background-color: $bitblue;
+	color: white;
+	font-size: 2rem;
+	height: 10vh;
+	padding: 1rem;
+}
+
+.header__logo {
+	font-size: 3rem;
 }
 
 .header__link {
@@ -32,7 +43,7 @@ body > .ember-view {
 
 .landing {
 	background-color: white;
-	flex: 1 0 auto;
+	height: 90vh;
 }
 
 .landing__text {
@@ -84,4 +95,8 @@ body > .ember-view {
 
 .daily-life__panel {
 	background-color: $darkgray;
+}
+
+.courses {
+	height: 90vh;
 }
