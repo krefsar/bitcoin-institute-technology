@@ -30,8 +30,13 @@ a {
 	padding: 1rem;
 }
 
-.header__logo {
+.header__title {
 	font-size: 3rem;
+}
+
+.header__logo {
+	height: 8vh;
+	width: 12rem;
 }
 
 .header__link {
@@ -45,6 +50,11 @@ a {
 .landing {
 	background-color: white;
 	height: 90vh;
+}
+
+.landing__logo {
+	height: 40rem;
+	width: 84rem;
 }
 
 .landing__text {
