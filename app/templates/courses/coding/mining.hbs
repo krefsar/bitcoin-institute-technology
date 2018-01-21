@@ -5,9 +5,9 @@
 			Back
 		{{/link-to}}
 
-		<h1 class='mining__title'>Creating public keys from a private key</h1>
+		<h1 class='mining__title'>Private Key Hashing</h1>
 
-		<button class='api__button'>
+		<button class='api__button {{if apiEnabled 'api__button--active' 'api__button--inactive'}}' {{action 'toggleApi'}}>
 			API
 		</button>
 	</header>
@@ -20,15 +20,15 @@
 				class='flex code__editor'}}
 		</div>
 
-		<div class='flex-30 instructions'>
+		<div class='instructions flex-30' data-sidebar-id='instructions'>
 			<h1 class='instructions__goal'>In order to get our private key ready for conversion to the WIF format, we need to modify and hash it multiple times.</h1>
 
-			<h2 class='instructions__prompt'>In this exercise, you'll have access to a String variable privateKey, which you'll have to modify according to the instructions below.</h2>
+			<h2 class='instructions__prompt'>In this exercise, you'll have access to a String variable <span class='code__snippet'>privateKey</span>, which you'll have to modify according to the instructions below.</h2>
 
 			<ol class='instructions__steps'>
-				<li class='instruction__step'>Prefix the Key - When hashing, every key needs a prefix specific to its type. Private keys need to have a prefix of '0x80'.</li>
-				<li class='instruction__step'>Hash It Twice - Use the SHA256 hashing algorithm on your private key twice: first on the prefixed key, then on the result of the first hashing. Use the SHA256 function of the built-in crypto library. (Remember you can always view built-in libraries by clicking the API button above)</li>
-				<li class='instruction__step'>Return the result.</li>
+				<li class='instruction__step'><span class='strong'>Prefix the Key</span> - When hashing, every key needs a prefix specific to its type. Private keys need to have a prefix of <span class='code__snippet'>'0x80'</span>.</li>
+				<li class='instruction__step'><span class='strong'>Hash It Twice</span> - Use the <span class='instruction__important'>SHA256 hashing algorithm</span> on your private key twice: first on the prefixed key, then on the result of the first hashing. Use the SHA256 function of the built-in <span class='instruction__important'>crypto</span> library. <br/>(Remember you can always view built-in libraries by clicking the API button above)</li>
+				<li class='instruction__step'><span class='strong'>Return the result.</span></li>
 			</ol>
 
 			<h2 class='instructions__prompt'>Click Run when you're ready to check your work.</h2>
@@ -42,10 +42,4 @@
 
 		{{outlet}}
 	</div>
-
-	<footer class='lesson__footer layout-row layout-align-space-between-center'>
-		<h1>Mining</h1>
-		<div>Progress</div>
-		<h1>Reward</h1>
-	</footer>
 </div>

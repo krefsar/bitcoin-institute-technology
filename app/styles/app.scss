@@ -272,11 +272,23 @@ a {
 
 .api__button {
 	background: transparent;
-	border: 2px solid white;
+	border: 2px solid gray;
 	border-radius: 3px;
-	color: white;
+	color: gray;
 	font-size: 2rem;
 	padding: 0 2rem;
+	outline: none;
+
+	&:hover {
+		color: $bityellow;
+		border-color: $bityellow;
+	}
+}
+
+.api__button--active {
+	background-color: $bitblue;
+	color: white;
+	border-color: white;
 }
 
 .mining {
@@ -290,6 +302,7 @@ a {
 
 	.ace_editor {
 		height: 100%;
+		font-size: 1.75rem;
 	}
 }
 
@@ -300,13 +313,13 @@ a {
 	padding: 2rem;
 	color: white;
 	font-size: 2rem;
+	line-height: 1.25;
 }
 
 .instructions__goal {
 	font-weight: 700;
 	font-size: 2.25rem;
 	margin-bottom: 1rem;
-	line-height: 1.25;
 }
 
 .instructions__prompt {
@@ -316,6 +329,16 @@ a {
 .instructions__steps {
 	list-style-type: decimal;
 	padding: 2rem;
+}
+
+.instruction__important {
+	text-decoration: underline;
+}
+
+.instruction__step {
+}
+
+.instruction__step .strong {
 	color: $bityellow;
 }
 
@@ -324,7 +347,7 @@ a {
 }
 
 .button__container {
-	margin-top: 3rem;
+	margin-top: 8rem;
 }
 
 .code__submit-button {
@@ -335,4 +358,8 @@ a {
 	font-size: 3rem;
 	width: 60%;
 	box-shadow: 0px 1rem 1rem black;
+}
+
+.code__snippet {
+	font-family: 'Monospace'
 }

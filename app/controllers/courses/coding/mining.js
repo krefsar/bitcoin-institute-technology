@@ -2,6 +2,7 @@ import Controller from '@ember/controller';
 import crypto from 'npm:crypto-js';
 
 export default Controller.extend({
+	apiEnabled: false,
 	customCode: '',
 
 	modifyCode(customCode) {
@@ -40,6 +41,10 @@ export default Controller.extend({
 					alert(`you returned ${result} and we expected ${testCase.expected}`);
 				}
 			});
+		},
+
+		toggleApi() {
+			this.toggleProperty('apiEnabled');
 		}
 	}
 });
