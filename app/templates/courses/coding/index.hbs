@@ -1,0 +1,11 @@
+<div class='flex'>
+	{{#each lessons as |lesson|}}
+		{{#link-to lesson.to}}
+			<div>
+				{{lesson.label}}
+			</div>
+		{{/link-to}}
+	{{/each}}
+
+	{{outlet}}
+</div>
