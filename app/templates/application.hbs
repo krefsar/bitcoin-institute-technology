@@ -1,5 +1,16 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+<div id="application">
+	<header id="site-header">
+		<div id="header-title">
+			Bitcoin Institute of Technology
+		</div>
 
-{{outlet}}
+		<nav>
+			<ul id="header-links">
+				<li>{{#link-to 'about'}}About{{/link-to}}</li>
+				<li>Login</li>
+			</ul>
+		</nav>
+	</header>
+
+	{{outlet}}
+</div>

@@ -1,0 +1,29 @@
+@import 'colors';
+
+#landing-page {
+	background-color: $bitblue-dark;
+	color: $bitwhite;
+
+	button {
+		margin: 2rem auto;
+	}
+}
+
+#landing-title {
+	font-size: 3rem;
+	font-weight: 700;
+	line-height: 1.25;
+	margin-left: 45%;
+	padding-top: 10rem;
+}
+
+#landing-text {
+	font-size: 1.5rem;
+	margin: 5rem auto;
+	text-align: center;
+	width: 60%;
+	
+	p {
+		margin: 1rem;
+	}
+}

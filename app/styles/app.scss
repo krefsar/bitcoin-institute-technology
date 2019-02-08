@@ -1,0 +1,69 @@
+@import 'reset';
+@import 'colors';
+
+@import 'landing';
+
+html {
+	font-size: 16px;
+}
+
+body {
+	background-color: $bitblue-dark;
+	font-family: Sans-Serif;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+button {
+	background-color: $bitblue;
+	border: none;
+	color: $bitwhite;
+	cursor: pointer;
+	display: block;
+	font-size: 1.5rem;
+	padding: 1rem;
+
+	&:hover {
+		box-shadow: 0px 0px 16px $bitwhite;
+	}
+
+	&:focus {
+		outline: none;
+	}
+}
+
+#site-header {
+	background-color: $bitblue-dark;
+	color: $bitwhite;
+	display: flex;
+	height: 5vh;
+	justify-content: space-between;
+	padding: 1rem;
+
+	#header-title {
+		align-items: center;
+		cursor: pointer;
+		display: flex;
+		font-size: 1.25rem;
+		font-style: italic;
+	}
+
+	nav {
+		align-items: center;
+		display: flex;
+
+		#header-links {
+			align-items: center;
+			display: flex;
+			font-size: 1rem;
+
+			li {
+				cursor: pointer;
+				margin: 0 1rem;
+			}
+		}
+	}
+}
