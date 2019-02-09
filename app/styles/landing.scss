@@ -1,25 +1,36 @@
 @import 'colors';
 
 #landing-page {
+	align-items: center;
 	background-color: $bitblue-dark;
 	color: $bitwhite;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 
 	button {
-		margin: 2rem auto;
+		margin: 1rem auto;
 	}
 }
 
 #landing-title {
+	align-items: center;
+	display: flex;
 	font-size: 3rem;
 	font-weight: 700;
 	line-height: 1.25;
-	margin-left: 45%;
-	padding-top: 10rem;
+	margin-top: 6rem;
+
+	img {
+		height: 8rem;
+		margin-right: 2rem;
+		width: 8rem;
+	}
 }
 
 #landing-text {
 	font-size: 1.5rem;
-	margin: 5rem auto;
+	margin: 4rem auto;
 	text-align: center;
 	width: 60%;
 	
