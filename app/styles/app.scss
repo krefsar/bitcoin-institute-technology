@@ -17,32 +17,13 @@ a {
 	text-decoration: none;
 }
 
-button {
-	background-color: $bitblue;
-	border: none;
-	border-radius: 4px;
-	color: $bitwhite;
-	cursor: pointer;
-	display: block;
-	font-size: 1.5rem;
-	padding: 1rem;
-
-	&:hover {
-		box-shadow: 0px 0px 16px $bitwhite;
-	}
-
-	&:focus {
-		outline: none;
-	}
-}
-
 #site-header {
 	background-color: $bitblue-dark;
 	color: $bitwhite;
 	display: flex;
 	height: 5vh;
 	justify-content: space-between;
-	padding: 1rem;
+	padding: 0.75rem;
 
 	#header-title {
 		align-items: center;
@@ -67,4 +48,16 @@ button {
 			}
 		}
 	}
+}
+
+.medium {
+	font-size: 1.5rem;
+}
+
+.large {
+	font-size: 3rem;
+}
+
+#mc-embedded-subscribe {
+	background-color: $bitblue !important;
 }

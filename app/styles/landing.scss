@@ -1,16 +1,19 @@
 @import 'colors';
 
 #landing-page {
+}
+
+#slide-1 {
 	align-items: center;
-	background-color: $bitblue-dark;
 	color: $bitwhite;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	height: 85vh;
+}
 
-	button {
-		margin: 1rem auto;
-	}
+#slide-2 {
+	background-color: $bitwhite;
+	height: 95vh;
 }
 
 #landing-title {
