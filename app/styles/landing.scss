@@ -5,40 +5,35 @@
 
 #slide-1 {
 	align-items: center;
+	background-color: $bitblue-dark;
 	color: $bitwhite;
 	display: flex;
 	flex-direction: column;
-	height: 85vh;
+	min-height: 80vh;
+	padding: 2rem;
+}
+
+#slide-1-signup {
+	margin: 1rem;
 }
 
 #slide-2 {
 	background-color: $bitwhite;
 	display: flex;
-	height: 95vh;
+	min-height: 80vh;
+	flex-direction: column;
 	position: relative;
-
-	.signup-form {
-		position: absolute;
-		bottom: 0;
-		width: 100%;
-	}
+	padding: 2rem;
 }
 
 #slide-2-text {
 	display: flex;
 	flex-direction: column;
-	margin-top: 10rem;
-	padding: 2rem;
-	width: 50%;
+	padding: 1rem;
 
 	h1 {
-		font-size: 3rem;
 		font-weight: 700;
 		margin: 1rem 0;
-	}
-
-	p {
-		font-size: 1.5rem;
 	}
 
 	ul {
@@ -46,49 +41,51 @@
 		list-style-position: inside;
 		padding: 1rem;
 	}
-
-	li {
-		font-size: 1.25rem;
-	}
 }
 
-#slide-2-image {
-	align-items: center;
-	display: flex;
-	justify-content: center;
-	height: 20rem;
-	margin-top: 10rem;
-	padding: 1rem;
-	position: relative;
-	width: 50%;
+#slide-2-signup {
+	margin: 2rem 1rem;
+}
 
-	.image-back {
+#slide-2-images {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 2rem 0;
+	position: relative;
+	width: 100%;
+}
+
+#img-container {
+	height: 40vw;
+	width: 60vw;
+	position: relative;
+
+	img {
+		background-color: $bitblack;
+		box-shadow: 0px 8px 8px $bitblack;
+		height: calc(100% - 4rem);
+		width: calc(100% - 4rem);
+		padding: 0.5rem;
 		position: absolute;
+	}
+
+	.img-back {
 		z-index: 1;
 		top: 0;
 		left: 0;
 	}
 
-	.image-middle {
-		position: absolute;
+	.img-middle {
 		z-index: 2;
-		top: 2rem;
-		left: 2rem;
+		top: 1.5rem;
+		left: 1.5rem;
 	}
 
-	.image-front {
-		position: absolute;
+	.img-front {
 		z-index: 3;
-		top: 4rem;
-		left: 4rem;
-	}
-
-
-	img {
-		background-color: $bitblack;
-		height: 20rem;
-		width: 30rem;
-		padding: 0.5rem;
+		top: 3rem;
+		left: 3rem;
 	}
 }
 
@@ -102,10 +99,9 @@ footer {
 	height: 10vh;
 }
 
-#landing-title {
+#slide-1-title {
 	align-items: center;
 	display: flex;
-	font-size: 3rem;
 	font-weight: 700;
 	line-height: 1.25;
 	margin-top: 6rem;
@@ -117,11 +113,9 @@ footer {
 	}
 }
 
-#landing-text {
-	font-size: 1.5rem;
+#slide-1-text {
 	margin: 4rem auto;
 	text-align: center;
-	width: 60%;
 	
 	p {
 		margin: 1rem;

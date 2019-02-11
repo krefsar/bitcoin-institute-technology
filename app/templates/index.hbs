@@ -1,20 +1,20 @@
 <div id="landing-page">
 	<section id="slide-1">
-		<div id="landing-title">
+		<div id="slide-1-title">
 			<img src="assets/bitcoin_logo.png" alt="cryptocurrency">
 
-			<h1>
+			<h1 class="title">
 				Learn Crypto.<br>For real.
 			</h1>
 		</div>
 
-		<div id="landing-text">
+		<div id="slide-1-text">
 			<p>
 				Think you need a degree to get into cryptocurrency?
 				<br>
 				Think again.
 			</p>
-
+			<br>
 			<p>
 				With Crypto Institute of Technology, you can skip the never-ending articles and get guided, hands-on training.
 			</p>
@@ -26,26 +26,32 @@
 	</section>
 
 	<section id="slide-2">
-		<div id="slide-2-text">
-			<h1>Learn by Doing</h1>
+		<div id="slide-2-content">
+			<div id="slide-2-text">
+				<h1 class="title">Learn by Doing</h1>
 
-			<p>
-				Gain proficiency with bite-sized coding lessons on a range of topics, including:
-			</p>
-			<ul>
-				<li>Private Key Generation</li>
-				<li>Transaction Validation</li>
-				<li>Peer Discovery</li>
-			</ul>
+				<p>
+					Gain proficiency with bite-sized coding lessons on a range of topics, including:
+				</p>
+				<ul class="small">
+					<li>Private Key Generation</li>
+					<li>Transaction Validation</li>
+					<li>Peer Discovery</li>
+				</ul>
+			</div>
+
+			<div id="slide-2-images">
+				<div id="img-container">
+					<img class="img-back" src="/assets/blockchain-lesson.png" />
+					<img class="img-middle" src="/assets/db-lesson.png" />
+					<img class="img-front" src="/assets/key-lesson.png" />
+				</div>
+			</div>
 		</div>
 
-		<div id="slide-2-image">
-			<img src="assets/dblesson.png" class="image-back" />
-			<img src="assets/lessonblockchain.png" class="image-middle" />
-			<img src="assets/lesson.png" class="image-front" />
+		<div id="slide-2-signup">
+			<SignupForm />
 		</div>
-
-		<SignupForm />
 	</section>
 
 	{{!--
@@ -67,6 +73,6 @@
 	</section>
 	--}}
 
-	<footer>
-	</footer>
+	{{!-- <footer>
+	</footer> --}}
 </div>

@@ -1,20 +1,57 @@
 @import 'reset';
 @import 'colors';
 
+@import 'media-dimensions';
 @import 'landing';
+@import 'signup-form';
 
 html {
-	font-size: 16px;
-}
-
-body {
-	background-color: $bitblue-dark;
 	font-family: Sans-Serif;
+
+	@media only screen and (max-width: $mobile-m) {
+		font-size: 8px;
+	}
+
+	@media only screen and (min-width: $mobile-m) {
+		font-size: 10px;
+	}
+
+	@media only screen and (min-width: $mobile-l) {
+		font-size: 12px;
+	}
+
+	@media only screen and (min-width: $tablet) {
+		font-size: 16px;
+	}
+
+	@media only screen and (min-width: $desktop) {
+		font-size: 16px;
+	}
 }
 
 a {
 	color: inherit;
 	text-decoration: none;
+}
+
+p {
+	font-size: 2.25rem;
+}
+
+.small {
+	font-size: 1.75rem !important;
+}
+
+.email {
+	padding: 2rem 1rem !important;
+}
+
+.button {
+	height: 4rem !important;
+}
+
+.title {
+	font-size: 3rem;
 }
 
 #site-header {
@@ -23,14 +60,14 @@ a {
 	display: flex;
 	height: 5vh;
 	justify-content: space-between;
-	padding: 0.75rem;
 
 	#header-title {
 		align-items: center;
 		cursor: pointer;
 		display: flex;
-		font-size: 1.25rem;
+		font-size: 1.5rem;
 		font-style: italic;
+		padding: 1rem;
 	}
 
 	nav {
